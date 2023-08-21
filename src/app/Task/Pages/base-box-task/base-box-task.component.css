@@ -1,0 +1,492 @@
+.Base-Box-Root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+
+.Base-Box {
+    width: 100%;
+    max-width: 100%; /* O ajusta el valor según tus necesidades */
+    height: max-content;
+    margin: 10px;
+    background-color: #fefefe;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agregando sombra para resaltar el cuadro */
+    box-sizing: border-box; /* Para incluir padding en el ancho */
+    border-radius: 10px;
+}
+
+.center-box{
+    padding: 5px;
+}
+
+/* This part is for the Header */
+
+.Top-title{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title-box{
+    margin-top: 14px;
+}
+
+.work-svg{
+    width: 35px;
+    height: auto;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    color: #0d55ff;
+}
+
+.pencil-task{
+    color: #0d55ff;
+}
+
+.header-box{
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px){
+    .Top-title{
+        font-size: 20px;
+    }
+    .work-svg{
+        width: 25px;
+        height: auto;
+        margin-bottom: 5px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .Top-title{
+        font-size: 25px;
+    }
+    .work-svg{
+        width: 30px;
+        height: auto;
+        margin-bottom: 10px;
+        margin-right: 20px;
+    }
+}
+
+/* This part is for the Task down Section */
+.Task-home-box{
+    width: min-content;
+    height: min-content;
+    background: #fefefe;
+    box-shadow: 0px 0px 10px #78a1ff;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px;
+}
+
+/* Animation */
+.task-animation{
+    width: 200px;
+    height: auto; 
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
+
+/* Css of the New Task */
+.task-button{
+    background: #0d55ff;
+    box-shadow: 0px 0px 10px #78a1ff;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-button:hover{
+    background: #2768ff;
+    box-shadow: 0px 0px 15px #78a1ff;
+}
+
+.task-box{
+    margin-top: 4px;
+}
+
+.task-svg{
+    margin-right: 13px;
+    margin-bottom: 4px;
+}
+
+.task-text{
+    color: #fefefe;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.task-svg{
+    color: #fefefe;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.task-button:hover .task-svg{
+    transform: scale(1.2,1.2);
+}
+
+.task-button:hover .task-text{
+    font-weight: 600;
+}
+
+/* Button new Task */
+.new-task-button{
+    border: none;
+    border-radius: 10px;
+}
+
+.new-box{
+    margin: 5px;
+}
+
+.new-svg{
+    margin: 10px;
+}
+
+.new-text{
+    margin: 10px;
+}
+
+/* Back button */
+.back-btn{
+    border: none;
+    background: none;
+    background-color: #ff2743;
+    box-shadow: 0px 0px 10px #ff2743;
+    color: #fefefe;
+    border-radius: 10px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-btn:hover{
+    background: #ff0022;
+    box-shadow: 0px 0px 15px #ff2743;
+}
+
+.back-svg{
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.back-text{
+    margin: 10px;
+    transition: font-weight 0.3s ease;
+}
+
+.back-btn:hover .back-svg{
+    transform: scale(1.2,1.2);
+}
+
+.back-btn:hover .back-text{
+    font-weight: 600;
+}
+
+/* Title */
+.modal-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+/* Center */
+.task-center-root{
+    /* background: linear-gradient(to left, #487ffe, #020bff); */
+    background: #2768ff;
+}
+
+.task-center-root label{
+    color: #fefefe;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.task-center-root input{
+    padding: 10px;
+}
+
+/* Shadow */
+.shadow-box{
+    box-shadow: 0px 0px 15px #2768ff;
+    border-radius: 10px;
+    background-color: #fefefe;
+}
+
+/* ListTask */
+.ListTask{
+    list-style: none;
+}
+
+/* ListTask-box */
+.ListTask-box{
+    box-shadow: 0px 0px 5px #2768ff;
+    border-radius: 10px;
+    margin-top: 25px;
+    padding: 8px;
+}
+
+.checkbox-item{
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-left: 6px;
+    transform: scale(2);
+    transition: transform 0.2s ease;
+}
+
+/* checkbox */
+.rounded-checkbox {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 5px;  
+
+    border: 2px solid #78a1ff;
+    outline: none;
+
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rounded-checkbox:hover{
+    transform: scale(2.3);
+}
+
+.rounded-checkbox:checked {
+    background-color: #2768ff;
+    border-color: #2768ff;
+    box-shadow: 0px 0px 4px #2768ff;
+    transform: scale(2.5);
+}
+  
+/* Task Id */
+.Task-Id{
+    margin-right: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:900;
+    font-size: 20px;
+}
+
+/* Task Name */
+.Task-Name{
+    margin-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #2768ff;
+    border: 2px solid #2768ff;
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.Task-Name:hover{
+    background-color: #2768ff;
+    box-shadow: 0px 0px 10px #78a1ff;
+    color: #fefefe;
+}
+
+/* Task-Description */
+.Task-Description{
+    margin-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #2768ff;
+    border: 2px solid #2768ff;
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.Task-Description:hover{
+    background-color: #2768ff;
+    box-shadow: 0px 0px 10px #78a1ff;
+    color: #fefefe;
+}
+
+/* Task-Resourses */
+.Task-Resourses{
+    margin-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #2768ff;
+    border: 2px solid #2768ff;
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.Task-Resourses:hover{
+    background-color: #2768ff;
+    box-shadow: 0px 0px 10px #78a1ff;
+    color: #fefefe;
+}
+/* Task-Date */
+.box-task-date{
+    box-shadow: inset 0px 0px 5px 1px #c8d9ff;
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.box-task-date:hover{
+    box-shadow: inset 0px 0px 5px 1px #a4c1ff;
+}
+
+.Task-Date{
+    font-family: 'Courier New', Courier, monospace;
+    color: #2768ff;
+    margin: 5px;
+    font-weight: 500;
+    transition: font-weight 0.2s ease;
+}
+
+.box-task-date:hover .Task-Date{
+    font-weight: 700;
+} 
+
+/* Delete Button */
+.btn-delete-task-box {
+    border: none;
+    background-color: #fefefe;
+    border: solid 2px #2768ff;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 5px;
+    border-radius: 32px;
+    color: #2768ff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+.delete-svg{
+    margin-bottom: 5px;
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+.btn-delete-task-box:hover{
+    background-color: #ff2743;
+    box-shadow: 0px 0px 10px #ff2743;
+    border: solid 2px #ff2743;
+    color: #fefefe;
+}
+
+.btn-delete-task-box:hover .delete-svg{
+    transform: scale(1.3,1.3);
+}
+
+/* Edit Button */
+.btn-edit-task-box {
+    border: none;
+    background-color: #fefefe;
+    border: solid 2px #2768ff;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 5px;
+    border-radius: 32px;
+    color: #2768ff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+.edit-svg{
+    margin-bottom: 5px;
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+.btn-edit-task-box:hover{
+    background-color: #ffce3f;
+    box-shadow: 0px 0px 10px #ffce3f;
+    border: solid 2px #ffce3f;
+    color: #fefefe;
+}
+
+.btn-edit-task-box:hover .edit-svg{
+    transform: scale(1.3,1.3);
+}
+
+/* Details Button */
+.btn-details-task-box {
+    border: none;
+    background-color: #fefefe;
+    border: solid 2px #2768ff;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 5px;
+    border-radius: 32px;
+    color: #2768ff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+.details-svg{
+    margin-bottom: 5px;
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+.btn-details-task-box:hover{
+    background-color: #00a3ee;
+    box-shadow: 0px 0px 10px #00a3ee;
+    border: solid 2px #00a3ee;
+    color: #fefefe;
+}
+
+.btn-details-task-box:hover .details-svg{
+    transform: scale(1.3,1.3);
+}
+
+/* details-list */
+.details-list{
+    list-style: none;
+}
+
+.Modal-Details-name-box{
+    background-color: #fefefe;
+    box-shadow: 0px 0px 10px #fefefe;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.Modal-Details-description-box{
+    background-color: #fefefe;
+    box-shadow: 0px 0px 10px #fefefe;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.Modal-Details-resourses-box{
+    background-color: #fefefe;
+    box-shadow: 0px 0px 10px #fefefe;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.Details-Title, .Details-Description, .Details-Resourses{
+    margin: 10px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2768ff;
+}
+
+.Modal-Details-name, .Modal-Details-description, .Modal-Details-resourses{
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 1px 1px #cfdeff;
+    transition: box-shadow 0.3s ease;
+}
+
+.Modal-Details-name:hover, .Modal-Details-description:hover, .Modal-Details-resourses:hover{
+    box-shadow: inset 0px 0px 3px 1px #bad0ff;
+}
+
+.Modal-Details-name-box-two{
+    margin-top: 15px;
+    margin-bottom: 8px;
+}

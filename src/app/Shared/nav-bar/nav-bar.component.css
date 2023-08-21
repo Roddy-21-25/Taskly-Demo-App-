@@ -1,0 +1,135 @@
+/* This is the Part of the Icon of The NavBar */
+.Navbar-img-box{
+    margin: 12px;
+    padding: 12px;
+    box-shadow: 0px 0px 10px #0035af;
+    width: max-content;
+    height: max-content;
+    border-radius: 100%;
+    transition: box-shadow 0.3s ease;
+    background-color: #2e6dff;
+    border: solid 2px #fefefe;
+}
+
+.Navbar-img-box:hover{
+    box-shadow: 0px 0px 10px #073092;
+}
+
+.Navbar-img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.Navbar-img-box:hover .Navbar-img{
+    transform: scale(1.2,1.2);
+}
+
+/* This part is for the Icons */
+.Home-svg, .Task-svg, .Notes-svg, .Tiger-svg, .Trash-svg{
+    margin-right: 20px;
+    margin-bottom: 4px;
+    color: #0d55ff;
+    transition: color 0.3s ease;
+}
+
+/* This part is for the Text */
+.Home-text, .Task-text, .Notes-text, .Tiger-text, .Trash-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #5386fd;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+/* This is the part of the Hover */
+.Home-link, .Task-link, .Notes-link, .Tiger-link, .Trash-link{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Home-link:hover, .Task-link:hover, .Notes-link:hover, .Tiger-link:hover, .Trash-link:hover{
+    background-color: #78a1ff;
+    box-shadow: 0px 0px 10px #78a1ff;
+}
+
+/* Hover of the Tags inside the Home Class */
+.Home-link:hover .Home-text{
+    color: #fefefe;
+}
+
+.Home-link:hover .Home-svg{
+    color: #fefefe;
+}
+
+/* Hover ofthe Tags inside the Task Class */
+.Task-link:hover .Task-text{
+    color: #fefefe;
+}
+
+.Task-link:hover .Task-svg{
+    color: #fefefe;
+}
+
+/* Hover ofthe Tags inside the Notes Class */
+.Notes-link:hover .Notes-text{
+    color: #fefefe;
+}
+
+.Notes-link:hover .Notes-svg{
+    color: #fefefe;
+}
+
+/* Hover ofthe Tags inside the Tiger Class */
+.Tiger-link:hover .Tiger-text{
+    color: #fefefe;
+}
+
+.Tiger-link:hover .Tiger-svg{
+    color: #fefefe;
+}
+
+/* Hover ofthe Tags inside the Trash Class */
+.Trash-link:hover .Trash-text{
+    color: #fefefe;
+}
+
+.Trash-link:hover .Trash-svg{
+    color: #fefefe;
+}
+
+/* This part Is About the User */
+.User-box{
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.User-link{
+    text-decoration: none;
+}
+
+.User-text{
+    margin-left: 6px;
+    margin-right: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #5386fd;
+}
+
+.User-img{
+    box-shadow: 0px 0px 5px #0035af;
+    border: solid 1px #fefefe;
+}
+
+.Up-box{
+    box-shadow: 0px 0px 10px #78a0ff;
+}
+
+.Up-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #5386fd;
+}

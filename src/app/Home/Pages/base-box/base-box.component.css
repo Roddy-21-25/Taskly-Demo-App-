@@ -1,0 +1,74 @@
+.Base-Box-Root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+
+.Base-Box {
+    width: 100%;
+    max-width: 100%; /* O ajusta el valor según tus necesidades */
+    height: max-content;
+    margin: 10px;
+    background-color: #fefefe;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agregando sombra para resaltar el cuadro */
+    box-sizing: border-box; /* Para incluir padding en el ancho */
+    border-radius: 10px;
+}
+
+/* This part is for the Header */
+
+.Top-title{
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.work-svg{
+    width: 35px;
+    height: auto;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    color: #0d55ff;
+}
+
+.header-box{
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px){
+    .Top-title{
+        font-size: 20px;
+    }
+    .work-svg{
+        width: 25px;
+        height: auto;
+        margin-bottom: 5px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .Top-title{
+        font-size: 25px;
+    }
+    .work-svg{
+        width: 30px;
+        height: auto;
+        margin-bottom: 10px;
+        margin-right: 20px;
+    }
+}
+
+/* This part is for the Task down Section */
+.Task-home-box{
+    width: min-content;
+    height: min-content;
+    background: #fefefe;
+    box-shadow: 0px 0px 10px #78a1ff;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px;
+}
+
+

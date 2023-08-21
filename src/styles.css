@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+/* These are the background css code */
+.gradient{
+    background: linear-gradient(to left, #487ffe, #000583);
+    width: 100%;
+    /* height: max-content; */
+    min-height: 100vh;
+    padding: 6px;
+}
+@media (max-width: 768px) {
+    .gradient {
+        height: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .gradient {
+        height: 100%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .gradient {
+        height: 100%;
+    }
+}
+
+@media (max-width: 1800px) {
+    .gradient {
+        height: 100%;
+    }
+}

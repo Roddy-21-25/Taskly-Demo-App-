@@ -1,0 +1,328 @@
+<div class="Base-Box-Root">
+    <div class="Base-Box">
+        <div class="container-fluid">
+            <div class="row g-0">
+
+                <!-- Right -->
+                <div class="col-md-2">
+                    <div class="">
+                        <div class="Nanbar-Section">
+                            <app-nav-bar></app-nav-bar>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Center -->
+                <div class="col-md-8">
+                    <div class="">
+                        <div class="row center-box text-center">
+                            <!-- Task Title -->
+                            <div class="col-md-4 title-box">
+                                <span class="Top-title"><span class="pencil-task">✎</span> Task DashBoard</span>
+                            </div>
+
+                            <!-- Search Box -->
+                            <div class="col-md-5">
+                                <app-box-search></app-box-search>
+                            </div>
+
+                            <!-- Button Task -->
+                            <div class="col-md-3"> 
+                                <div class="task-box">
+                                    <button class="btn m-1 fst-italic task-button" data-bs-toggle="modal" data-bs-target="#ModalPopUp" type="button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square task-svg" viewBox="0 0 16 16">
+                                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                        </svg>
+                                        <span class="task-text">
+                                            Add Task
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                                
+                                <!-- Modal -->
+                                <form>
+                                    <div class="modal fade" id="ModalPopUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+                                        <div class="modal-dialog modal-lg shadow-box">
+                                            <div class="modal-content">
+
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                    <span class="keyboard mb-1 me-3">+</span>
+                                                    <h5 class="modal-title" id="exampleModalLabel">Add Task</h5>
+                                                    <span class="keyboard mb-1 ms-3">+</span>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+
+                                                <!-- Modal Content -->
+                                                <div class="modal-body task-center-root">
+                                                    <div class="task-center-box">
+
+                                                        <!-- Name formControlName="name" -->
+                                                        <div class="Name-box">
+                                                            <label for="exampleInputEmail1" class="form-label">♢ Task Title ♢</label>
+                                                            <input name="name" [formControl]="nameControl" type="text" class="form-control" #name id="exampleInputEmail1"  placeholder="Write the Title of the Task">
+                                                            <div class="alert alert-danger m-2" [hidden]="nameControl.valid || nameControl.untouched">
+                                                            Write a Name for your Task
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Description formControlName="description" -->
+                                                        <div class="Description-box">
+                                                            <label for="exampleFormControlTextarea1" class="form-label">♢♢ Task Description ♢♢</label>
+                                                            <textarea name="description" [formControl]="descriptionControl" class="form-control" #description id="exampleFormControlTextarea1" placeholder="what will you do?.." rows="3"></textarea>
+                                                            <div class="alert alert-danger m-2" [hidden]="descriptionControl.valid || descriptionControl.untouched">
+                                                            Write a description for your Task
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Resources formControlName="resources" -->
+                                                        <div class="Resources-box mb-3">
+                                                            <label for="exampleFormControlTextarea1" class="form-label">♢♢♢ Task Resources ♢♢♢</label>
+                                                            <textarea name="resources" [formControl]="resourcesControl" class="form-control" #resources id="exampleFormControlTextarea1"  placeholder="Put here all the Resources that you will use for complete the task" rows="3"></textarea>
+                                                            <div class="alert alert-danger m-2" [hidden]="resourcesControl.valid || resourcesControl.untouched">
+                                                                Write all the resources that you will use for to commplete your task
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- Modal Footer -->
+                                                <div class="modal-footer">
+                                                    <div class="back-box ms-3">
+                                                        <button type="button" class="back-btn" data-bs-dismiss="modal">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill back-svg" viewBox="0 0 16 16">
+                                                                <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
+                                                            </svg>
+                                                            <span class="back-text">
+                                                                Back
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <!-- This Button Will create the New Task -->
+                                                    <div class="task-box new-box">
+                                                        <!-- (click)="SendData(name.value, description.value, resources.value)" -->
+                                                        <button type="button" 
+                                                                class="task-button new-task-button" 
+                                                                (click)="SendData(name.value, description.value, resources.value)" data-bs-dismiss="modal"
+                                                                [disabled]="nameControl.invalid || descriptionControl.invalid || resourcesControl.invalid ">
+
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square task-svg new-svg" viewBox="0 0 16 16">
+                                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                                            </svg>
+                                                            
+                                                            <span class="task-text new-text">
+                                                                New Task
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            
+                            <div class="col-md-12">
+                                <!-- List the Task -->
+                                <ul>
+                                    <li *ngFor="let task of TaskList" class="ListTask">
+                                        <div class="ListTask-box truncate-text">
+                                            <span>
+                                                <input class="checkbox-item rounded-checkbox" (click)="removeTask(task)" type="checkbox" [formControl]="CheckControl">
+                                                <span class="Task-Id">{{task.id}}</span>
+                                                <span class="Task-Name">{{ truncateText(task.name + '', 20) }}</span>
+                                                <span class="Task-Description">{{ truncateText(task.description + '', 20) }}</span>
+                                                <span class="Task-Resourses">{{ truncateText(task.resourses + '', 20) }}</span>
+                                            </span>
+
+                                            <div class="box-task-date">
+                                                <span class="Task-Date"><strong>Creation Date:</strong> {{task.date}}</span>
+
+                                                <span class="btn-task-root">
+                                                    <div class="btn-task-box">
+                                                        <!-- Delete -->
+                                                        <button class="btn-delete-task-box mt-1" (click)="removeTask(task)">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-x delete-svg" viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd" d="M6.146 6.146a.5.5 0 0 1 .708 0L8 7.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 8l1.147 1.146a.5.5 0 0 1-.708.708L8 8.707 6.854 9.854a.5.5 0 0 1-.708-.708L7.293 8 6.146 6.854a.5.5 0 0 1 0-.708z"/>
+                                                                <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                                                                <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                                                            </svg>
+                                                            Delete Task
+                                                        </button>
+                                                        <!-- Edit: (click)="getTaskByIdEditModal(task)"  -->
+                                                        <button class="btn-edit-task-box" (click)="getTaskById(task)" data-bs-toggle="modal" data-bs-target="#ModalPopUpEdit" type="button">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square edit-svg" viewBox="0 0 16 16">
+                                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                                            </svg>
+                                                            Edit Task
+                                                        </button>
+
+                                                        <!-- Details -->
+                                                        <button class="btn-details-task-box" (click)="getTaskById(task)" data-bs-toggle="modal" data-bs-target="#ModalPopUpDetails" type="button">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye details-svg" viewBox="0 0 16 16">
+                                                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                                            </svg>
+                                                            Details Task
+                                                        </button>
+
+                                                        <!-- Details Modal -->
+                                                        <form>
+                                                            <div class="modal fade" id="ModalPopUpDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+                                                                <div class="modal-dialog modal-lg shadow-box">
+                                                                    <div class="modal-content">
+
+                                                                        <!-- Modal Header -->
+                                                                        <div class="modal-header">
+                                                                            <span class="keyboard mb-1 me-3">+</span>
+                                                                            <h5 class="modal-title" id="exampleModalLabel">Details Task</h5>
+                                                                            <span class="keyboard mb-1 ms-3">+</span>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                        </div>
+
+                                                                        <!-- Modal Content -->
+                                                                        <div class="modal-body task-center-root">
+                                                                            <span>
+                                                                                <div class="Modal-Details-name-box">
+                                                                                    <span class="Details-Title">⤙ Title ⤚</span> <br>
+                                                                                    <div class="Modal-Details-name-box-two Modal-Details-name">
+                                                                                        <span class="">{{ DetailsModalTask?.name }}</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="Modal-Details-description-box">
+                                                                                    <span class="Details-Description">⤙ Description ⤚</span> <br>
+                                                                                    <div class="Modal-Details-name-box-two Modal-Details-description">
+                                                                                        <span class="">{{ DetailsModalTask?.description }}</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="Modal-Details-resourses-box">
+                                                                                    <span class="Details-Resourses">⤙ Resourses ⤚</span> <br>
+                                                                                    <div class="Modal-Details-name-box-two Modal-Details-resourses">
+                                                                                        <span class="">{{ DetailsModalTask?.resourses }}</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </span>
+                                                                        </div>
+
+                                                                        <!-- Modal Footer -->
+                                                                        <div class="modal-footer">
+                                                                            <div class="back-box ms-3">
+                                                                                <button type="button" class="back-btn" data-bs-dismiss="modal">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill back-svg" viewBox="0 0 16 16">
+                                                                                        <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
+                                                                                    </svg>
+                                                                                    <span class="back-text">
+                                                                                        Back
+                                                                                    </span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+
+                                                        <!-- Edit Modal -->
+                                                        <form>
+                                                            <div class="modal fade" id="ModalPopUpEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+                                                                <div class="modal-dialog modal-lg shadow-box">
+                                                                    <div class="modal-content">
+
+                                                                        <!-- Modal Header -->
+                                                                        <div class="modal-header">
+                                                                            <span class="keyboard mb-1 me-3">+</span>
+                                                                            <h5 class="modal-title" id="exampleModalLabel">Edit Task</h5>
+                                                                            <span class="keyboard mb-1 ms-3">+</span>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                        </div>
+
+                                                                        <!-- Modal Content -->
+                                                                        <div class="modal-body task-center-root">
+                                                                            <div>
+
+                                                                                <!-- Name formControlName="name" -->
+                                                                                <div class="Name-box">
+                                                                                    <label for="exampleInputEmail1" class="form-label">♢ Task Title ♢</label>
+                                                                                    <input name="name" type="text" class="form-control" #name id="exampleInputEmail1" [value]="DetailsModalTask?.name">
+                                                                                </div>                            
+
+                                                                                <!-- Description formControlName="description" -->
+                                                                                <div class="Description-box">
+                                                                                    <label for="exampleFormControlTextarea1" class="form-label">♢♢ Task Description ♢♢</label>
+                                                                                    <textarea name="description" class="form-control" #description id="exampleFormControlTextarea1" [value]="DetailsModalTask?.description" rows="3"></textarea>
+                                                                                </div>       
+
+                                                                                <!-- Resources formControlName="resources" -->
+                                                                                <div class="Resources-box mb-3">
+                                                                                    <label for="exampleFormControlTextarea1" class="form-label">♢♢♢ Task Resources ♢♢♢</label>
+                                                                                    <textarea name="resources" class="form-control" #resources id="exampleFormControlTextarea1" [value]="DetailsModalTask?.resourses" rows="3"></textarea>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!-- Modal Footer -->
+                                                                        <div class="modal-footer">
+
+                                                                            <div class="back-box ms-3">
+                                                                                <button type="button" class="back-btn" data-bs-dismiss="modal">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill back-svg" viewBox="0 0 16 16">
+                                                                                        <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
+                                                                                    </svg>
+                                                                                    <span class="back-text">
+                                                                                        Back
+                                                                                    </span>
+                                                                                </button>
+                                                                            </div>
+
+                                                                            <div class="task-box new-box">
+                                                                                <!-- (click)="UpdateTaskInfo(name.value, description.value, resources.value)" -->
+                                                                                <!-- (click)="UpdateTaskInfo(task, name.value, description.value, resources.value)" -->
+                                                                                <button type="button" 
+                                                                                        class="task-button new-task-button" data-bs-dismiss="modal"
+                                                                                        (click)="UpdateTaskInfo(DetailsModalTask?.id, name.value, description.value, resources.value)">
+                                                                                        
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square task-svg new-svg" viewBox="0 0 16 16">
+                                                                                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                                                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                                                                    </svg>
+                                                                                    
+                                                                                    <span class="task-text new-text">
+                                                                                        New Task
+                                                                                    </span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left -->
+                <div class="col-md-2">
+                    <div class="animation-box">
+                         <img src="/assets/personal goals checklist - task.gif" class="task-animation">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

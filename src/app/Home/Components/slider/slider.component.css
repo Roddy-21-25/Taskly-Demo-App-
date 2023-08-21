@@ -1,0 +1,20 @@
+.Carrousel-box{
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+.Carrousel-container{
+    box-shadow: 0px 0px 10px #78a0ff;
+    border-radius: 10px;
+}
+
+.Carrousel-container img{
+    border-radius: 10px;
+    transition: filter 0.3s ease; /* Agrega una transición suave al filtro */
+}
+
+.Carrousel-container img:hover {
+    filter: brightness(1.2); /* Brillo aumentado en hover */
+    cursor: pointer;
+}

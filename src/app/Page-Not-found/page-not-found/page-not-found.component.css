@@ -1,0 +1,67 @@
+/* This is the Css of the Symbol */
+.NotFound-Symbol{
+    color: #fefefe;
+    margin: 50px;
+    font-size: 10em;
+}
+
+@media screen and (min-width: 375px) and (max-width: 1023px) {
+    .NotFound-Symbol{
+        font-size: 8em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .NotFound-Symbol{
+        font-size: 6em;
+    }
+}
+
+.NotFound-Text{
+    color: #fefefe;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+/* This is the Css of the Button Home */
+
+.Home-svg{
+    margin-right: 20px;
+    margin-bottom: 8px;
+    width: 20px;
+    height: auto;
+    color: #0d55ff;
+    transition: color 0.3s ease;
+}
+
+.Home-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ccdbff;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.Home-link{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-top: 4px;
+    border-radius: 10px;
+    border: solid 2px #ccdbff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Home-link:hover{
+    background-color: #78a1ff;
+    box-shadow: 0px 0px 10px #78a1ff;
+}
+
+.Home-link:hover .Home-text{
+    color: #fefefe;
+}
+
+.Home-link:hover .Home-svg{
+    color: #fefefe;
+}
+
