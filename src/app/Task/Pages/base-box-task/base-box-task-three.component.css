@@ -1,0 +1,114 @@
+
+/* checkbox */
+.rounded-checkbox {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 5px;  
+
+    border: 2px solid #78a1ff;
+    outline: none;
+
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rounded-checkbox:hover{
+    transform: scale(2.3);
+}
+
+.rounded-checkbox:checked {
+    background-color: #2768ff;
+    border-color: #2768ff;
+    box-shadow: 0px 0px 4px #2768ff;
+    transform: scale(2.5);
+}
+  
+/* Task Id */
+.Task-Id{
+    margin-right: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:900;
+    font-size: 20px;
+}
+
+/* Task Name */
+.Task-Name{
+    margin-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #2768ff;
+    border: 2px solid #2768ff;
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.Task-Name:hover{
+    background-color: #2768ff;
+    box-shadow: 0px 0px 10px #78a1ff;
+    color: #fefefe;
+}
+
+/* Task-Description */
+.Task-Description{
+    margin-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #2768ff;
+    border: 2px solid #2768ff;
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.Task-Description:hover{
+    background-color: #2768ff;
+    box-shadow: 0px 0px 10px #78a1ff;
+    color: #fefefe;
+}
+
+/* Task-Resourses */
+.Task-Resourses{
+    margin-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #2768ff;
+    border: 2px solid #2768ff;
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.Task-Resourses:hover{
+    background-color: #2768ff;
+    box-shadow: 0px 0px 10px #78a1ff;
+    color: #fefefe;
+}
+/* Task-Date */
+.box-task-date{
+    box-shadow: inset 0px 0px 5px 1px #c8d9ff;
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.box-task-date:hover{
+    box-shadow: inset 0px 0px 5px 1px #a4c1ff;
+}
+
+.Task-Date{
+    font-family: 'Courier New', Courier, monospace;
+    color: #2768ff;
+    margin: 5px;
+    font-weight: 500;
+    transition: font-weight 0.2s ease;
+}
+
+.box-task-date:hover .Task-Date{
+    font-weight: 700;
+} 
