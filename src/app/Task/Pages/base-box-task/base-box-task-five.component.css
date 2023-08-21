@@ -1,0 +1,52 @@
+
+/* Button new Task */
+.new-task-button{
+    border: none;
+    border-radius: 10px;
+}
+
+.new-box{
+    margin: 5px;
+}
+
+.new-svg{
+    margin: 10px;
+}
+
+.new-text{
+    margin: 10px;
+}
+
+/* Back button */
+.back-btn{
+    border: none;
+    background: none;
+    background-color: #ff2743;
+    box-shadow: 0px 0px 10px #ff2743;
+    color: #fefefe;
+    border-radius: 10px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-btn:hover{
+    background: #ff0022;
+    box-shadow: 0px 0px 15px #ff2743;
+}
+
+.back-svg{
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.back-text{
+    margin: 10px;
+    transition: font-weight 0.3s ease;
+}
+
+.back-btn:hover .back-svg{
+    transform: scale(1.2,1.2);
+}
+
+.back-btn:hover .back-text{
+    font-weight: 600;
+}

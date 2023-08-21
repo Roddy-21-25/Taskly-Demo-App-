@@ -6,7 +6,8 @@ import { FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-base-box-task',
   templateUrl: './base-box-task.component.html',
-  styleUrls: ['./base-box-task.component.css','./base-box-task-two.component.css','./base-box-task-three.component.css']
+  styleUrls: ['./base-box-task.component.css','./base-box-task-two.component.css','./base-box-task-three.component.css','./base-box-task-four.component.css'
+  ,'./base-box-task-five.component.css','./base-box-task-six.component.css']
 })
 // implements OnInit
 export class BaseBoxTaskComponent{

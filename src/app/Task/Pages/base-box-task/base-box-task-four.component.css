@@ -1,0 +1,52 @@
+
+/* Title */
+.modal-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+/* Center */
+.task-center-root{
+    /* background: linear-gradient(to left, #487ffe, #020bff); */
+    background: #2768ff;
+}
+
+.task-center-root label{
+    color: #fefefe;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.task-center-root input{
+    padding: 10px;
+}
+
+/* Shadow */
+.shadow-box{
+    box-shadow: 0px 0px 15px #2768ff;
+    border-radius: 10px;
+    background-color: #fefefe;
+}
+
+/* ListTask */
+.ListTask{
+    list-style: none;
+}
+
+/* ListTask-box */
+.ListTask-box{
+    box-shadow: 0px 0px 5px #2768ff;
+    border-radius: 10px;
+    margin-top: 25px;
+    padding: 8px;
+}
+
+.checkbox-item{
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-left: 6px;
+    transform: scale(2);
+    transition: transform 0.2s ease;
+}
